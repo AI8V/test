@@ -1,6 +1,4 @@
-importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
-
-const VERSION = 'v2.1.1';
+const VERSION = 'v2.1.2';
 const CACHE = `ai8v-${VERSION}`;
 
 // القائمة الموحدة للملفات الأساسية
