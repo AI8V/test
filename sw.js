@@ -1,10 +1,11 @@
-const VERSION = 'v2.1.2';
+const VERSION = 'v2.1.3';
 const CACHE = `ai8v-${VERSION}`;
 
 // القائمة الموحدة للملفات الأساسية
 const CORE = [
   '/',
   '/index.html',
+  '/thank-you.html',
   '/manifest.json',
   '/assets/bootstrap/js/bootstrap.min.js',
   '/assets/bootstrap/css/bootstrap.min.css',
