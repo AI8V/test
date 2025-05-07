@@ -1,3 +1,17 @@
+/* تحسينات الحركة - امكانية تعطيل الحركة عند تفضيل المستخدم */
+@media (prefers-reduced-motion: reduce) {
+  .bg-animation {
+    animation: none !important;
+  }
+  
+  /* تعطيل الحركات الأخرى */
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
+
+/* الحركة الأصلية مع تحسين باستخدام will-change */
 @keyframes moveBg {
   0% {
     transform: rotate(0deg) scale(1);
@@ -10,3 +24,54 @@
   }
 }
 
+.bg-animation {
+  will-change: transform;
+}
+
+/* تحسين التباين للتسهيل على ضعاف البصر */
+.high-contrast {
+  --primary-color: #00ffff; /* لون أكثر تباينًا */
+  --text-color: #ffffff;
+  --background-darker: #000000;
+  --background-dark: #121212;
+}
+
+/* تحسين تجربة التركيز لإمكانية الوصول */
+a:focus, button:focus, [tabindex="0"]:focus {
+  outline: 3px solid #00ffff !important;
+  outline-offset: 3px;
+}
+
+/* تحسينات الأداء عند التمرير */
+.feature-card, .testimonial-card {
+  contain: content;
+}
+
+/* تحسين تجربة الهواتف */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: calc(1.5rem + 1vw) !important;
+  }
+  
+  p {
+    font-size: 1rem !important;
+  }
+  
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* تحسين للتحميل المتدرج للصور */
+img {
+  transition: opacity 0.3s;
+}
+
+img.lazy {
+  opacity: 0;
+}
+
+img.loaded {
+  opacity: 1;
+}
