@@ -18,6 +18,8 @@ const CORE = [
   '/assets/bootstrap/css/bootstrap.min.css',
   '/manifest.json',
   '/assets/css/styles.css',
+  '/assets/bootstrap/js/bootstrap.min.js',
+  '/assets/js/script.js',
 ];
 
 // حدث التثبيت - تخزين الملفات الأساسية
