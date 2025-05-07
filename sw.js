@@ -1,12 +1,18 @@
 importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
 
-const VERSION = 'v2.1.0';
+const VERSION = 'v2.1.1';
 const CACHE = `ai8v-${VERSION}`;
 
 // القائمة الموحدة للملفات الأساسية
 const CORE = [
   '/',
   '/index.html',
+  '/manifest.json',
+  '/assets/bootstrap/js/bootstrap.min.js',
+  '/assets/bootstrap/css/bootstrap.min.css',
+  '/assets/js/script.js',
+  '/assets/css/styles.css',
+  '/assets/img/ai8v.png',
   '/assets/img/apple-touch-icon.png',
   '/assets/img/favicon-16x16.png',
   '/assets/img/favicon-16x16-dark.png" media="(prefers-color-scheme: dark)',
@@ -15,11 +21,6 @@ const CORE = [
   '/assets/img/apple-touch-icon.png',
   '/assets/img/android-chrome-192x192.png',
   '/assets/img/android-chrome-512x512.png',
-  '/assets/bootstrap/css/bootstrap.min.css',
-  '/manifest.json',
-  '/assets/css/styles.css',
-  '/assets/bootstrap/js/bootstrap.min.js',
-  '/assets/js/script.js',
 ];
 
 // حدث التثبيت - تخزين الملفات الأساسية
