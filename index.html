@@ -37,129 +37,158 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
     <link rel="stylesheet" href="assets/css/styles.css">
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "54b7c665-d65e-4bdd-a339-6e63a8a97fd0",
-      safari_web_id: "web.onesignal.auto.2d1085e1-a560-4918-b950-42f254dd8495",
-      notifyButton: {
-        enable: true,
-      },
-    });
-  });
-</script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function(OneSignal) {
+            await OneSignal.init({
+                appId: "54b7c665-d65e-4bdd-a339-6e63a8a97fd0",
+                safari_web_id: "web.onesignal.auto.2d1085e1-a560-4918-b950-42f254dd8495",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100" style="position:relative;overflow:hidden;background:linear-gradient(135deg, #666, #444);">
-        <div style="position:absolute;width:150%;height:150%;background:radial-gradient(circle at 30% 30%, rgba(0, 240, 255, 0.1), transparent 60%),
-                radial-gradient(circle at 70% 70%, rgba(0, 140, 255, 0.08), transparent 60%);animation:moveBg 20s linear infinite;z-index:0;"></div>
+    <!-- القسم الرئيسي (Hero Section) -->
+    <header class="container-fluid d-flex justify-content-center align-items-center min-vh-100" style="position:relative;overflow:hidden;background:linear-gradient(135deg, #666, #444);" id="hero">
+        <div class="bg-animation" style="position:absolute;width:150%;height:150%;background:radial-gradient(circle at 30% 30%, rgba(0, 240, 255, 0.1), transparent 60%),
+                radial-gradient(circle at 70% 70%, rgba(0, 140, 255, 0.08), transparent 60%);animation:moveBg 20s linear infinite;z-index:0;" aria-hidden="true"></div>
         <div class="text-center p-5 rounded" style="position:relative;z-index:1;background-color:#2c2c2c;box-shadow:0 0 15px #00f0ff;color:white;max-width:600px;width:100%;border:2px solid #00f0ff;">
-            <h1 class="fw-bold mb-3"> VIP أهلاً بيك في عالم </h1>
-            <p class="mb-4" style="color:#ccc;"> معانا هتحس إنك بتطير بدون جناحات </p><a class="btn btn-primary fs-5 px-4 py-2" role="button" href="#features"> ابدأ الرحلة </a>
+            <h1 class="fw-bold mb-3" tabindex="0"> VIP أهلاً بيك في عالم </h1>
+            <p class="mb-4" style="color:#ccc;" tabindex="0"> معانا هتحس إنك بتطير بدون جناحات </p>
+            <a class="btn btn-primary fs-5 px-4 py-2" role="button" href="#features" aria-label="ابدأ الرحلة وتعرف على خدماتنا"> ابدأ الرحلة </a>
         </div>
-    </div>
-    <section id="features" class="py-5" style="background:linear-gradient(to bottom, #1e1e1e, #2a2a2a);color:white;">
+    </header>
+
+    <!-- قسم المميزات (Features Section) -->
+    <section id="features" class="py-5" style="background:linear-gradient(to bottom, #1e1e1e, #2a2a2a);color:white;" aria-labelledby="features-heading">
         <div class="container">
-            <h2 class="fw-bold text-center mb-5" style="font-size:2rem;">ليه تختارنا؟ 💡</h2>
+            <h2 id="features-heading" class="fw-bold text-center mb-5" style="font-size:2rem;" tabindex="0">ليه تختارنا؟ 💡</h2>
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;transition:transform 0.3s ease, box-shadow 0.3s ease;">
-                        <div class="mb-3" style="font-size:40px;color:#00bfff;"><span> 🚀 </span></div>
-                        <h4 class="fw-bold mb-2">سرعة خارقة</h4>
-                        <p style="color:#ccc;">موقعنا معمول بأحدث التقنيات علشان يحملك بسرعة البرق ويديلك تجربة سلسة.</p>
-                    </div>
+                    <article class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="mb-3" style="font-size:40px;color:#00bfff;" aria-hidden="true"><span role="img" aria-label="صاروخ"> 🚀 </span></div>
+                        <h3 class="fw-bold mb-2" tabindex="0">سرعة خارقة</h3>
+                        <p style="color:#ccc;" tabindex="0">موقعنا معمول بأحدث التقنيات علشان يحملك بسرعة البرق ويديلك تجربة سلسة.</p>
+                    </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;transition:transform 0.3s ease, box-shadow 0.3s ease;">
-                        <div class="mb-3" style="font-size:40px;color:#00bfff;"><span> 🎯 </span></div>
-                        <h4 class="fw-bold mb-2">دعم VIP</h4>
-                        <p style="color:#ccc;">إنت مش لوحدك، دايمًا فيه حد يسمعك ويدعمك طول الطريق.</p>
-                    </div>
+                    <article class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="mb-3" style="font-size:40px;color:#00bfff;" aria-hidden="true"><span role="img" aria-label="هدف"> 🎯 </span></div>
+                        <h3 class="fw-bold mb-2" tabindex="0">دعم VIP</h3>
+                        <p style="color:#ccc;" tabindex="0">إنت مش لوحدك، دايمًا فيه حد يسمعك ويدعمك طول الطريق.</p>
+                    </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;transition:transform 0.3s ease, box-shadow 0.3s ease;">
-                        <div class="mb-3" style="font-size:40px;color:#00bfff;"><span> 📱 </span></div>
-                        <h4 class="fw-bold mb-2">سهولة الاستخدام</h4>
-                        <p style="color:#ccc;">كل حاجة مصممة تبقى سهلة، حتى لو أول مرة تدخل عالمنا!</p>
-                    </div>
+                    <article class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="mb-3" style="font-size:40px;color:#00bfff;" aria-hidden="true"><span role="img" aria-label="هاتف ذكي"> 📱 </span></div>
+                        <h3 class="fw-bold mb-2" tabindex="0">سهولة الاستخدام</h3>
+                        <p style="color:#ccc;" tabindex="0">كل حاجة مصممة تبقى سهلة، حتى لو أول مرة تدخل عالمنا!</p>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
-    <section id="social-proof" class="py-5" style="background:linear-gradient(to bottom, #2a2a2a, #1e1e1e);color:white;">
+
+    <!-- قسم آراء العملاء (Social Proof Section) -->
+    <section id="social-proof" class="py-5" style="background:linear-gradient(to bottom, #2a2a2a, #1e1e1e);color:white;" aria-labelledby="social-proof-heading">
         <div class="container">
-            <h2 class="fw-bold text-center mb-5" style="font-size:2rem;">الناس قالت علينا 💬</h2>
+            <h2 id="social-proof-heading" class="fw-bold text-center mb-5" style="font-size:2rem;" tabindex="0">الناس قالت علينا 💬</h2>
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;">
-                        <p style="color:#ccc;">"خدمة ولا أروع! سرعة فى التنفيذ ودقة عالية. أكيد مش آخر تعامل!"</p>
-                        <h6 class="fw-bold mt-3" style="color:#00bfff;">أحمد علي</h6>
-                    </div>
+                    <figure class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;">
+                        <blockquote>
+                            <p style="color:#ccc;" tabindex="0">"خدمة ولا أروع! سرعة فى التنفيذ ودقة عالية. أكيد مش آخر تعامل!"</p>
+                        </blockquote>
+                        <figcaption class="fw-bold mt-3" style="color:#00bfff;" tabindex="0">أحمد علي</figcaption>
+                    </figure>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;">
-                        <p style="color:#ccc;">"كنت متردد في البداية، بس بجد التجربة كانت فوق التوقعات! أنصح بيهم جداً."</p>
-                        <h6 class="fw-bold mt-3" style="color:#00bfff;">منة سامي</h6>
-                    </div>
+                    <figure class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;">
+                        <blockquote>
+                            <p style="color:#ccc;" tabindex="0">"كنت متردد في البداية، بس بجد التجربة كانت فوق التوقعات! أنصح بيهم جداً."</p>
+                        </blockquote>
+                        <figcaption class="fw-bold mt-3" style="color:#00bfff;" tabindex="0">منة سامي</figcaption>
+                    </figure>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;">
-                        <p style="color:#ccc;">"أفضل خدمة ممكن تاخدها وانت مغمض. دعم ممتاز واستجابة سريعة."</p>
-                        <h6 class="fw-bold mt-3" style="color:#00bfff;">كريم يوسف</h6>
-                    </div>
+                    <figure class="text-center shadow-sm p-4 rounded h-100" style="background-color:#333;border:1px solid #00bfff;">
+                        <blockquote>
+                            <p style="color:#ccc;" tabindex="0">"أفضل خدمة ممكن تاخدها وانت مغمض. دعم ممتاز واستجابة سريعة."</p>
+                        </blockquote>
+                        <figcaption class="fw-bold mt-3" style="color:#00bfff;" tabindex="0">كريم يوسف</figcaption>
+                    </figure>
                 </div>
             </div>
             <div class="row text-center mt-5">
                 <div class="col-6 col-md-3 mb-4">
-                    <h3 class="fw-bold" style="color:#00bfff;">+5000</h3>
-                    <p style="color:#ccc;">عميل سعيد</p>
+                    <h3 class="fw-bold" style="color:#00bfff;" tabindex="0">+5000</h3>
+                    <p style="color:#ccc;" tabindex="0">عميل سعيد</p>
                 </div>
                 <div class="col-6 col-md-3 mb-4">
-                    <h3 class="fw-bold" style="color:#00bfff;">+150</h3>
-                    <p style="color:#ccc;">مشروع ناجح</p>
+                    <h3 class="fw-bold" style="color:#00bfff;" tabindex="0">+150</h3>
+                    <p style="color:#ccc;" tabindex="0">مشروع ناجح</p>
                 </div>
                 <div class="col-6 col-md-3 mb-4">
-                    <h3 class="fw-bold" style="color:#00bfff;">+10</h3>
-                    <p style="color:#ccc;">سنين خبرة</p>
+                    <h3 class="fw-bold" style="color:#00bfff;" tabindex="0">+10</h3>
+                    <p style="color:#ccc;" tabindex="0">سنين خبرة</p>
                 </div>
                 <div class="col-6 col-md-3 mb-4">
-                    <h3 class="fw-bold" style="color:#00bfff;">24/7</h3>
-                    <p style="color:#ccc;">دعم مستمر</p>
+                    <h3 class="fw-bold" style="color:#00bfff;" tabindex="0">24/7</h3>
+                    <p style="color:#ccc;" tabindex="0">دعم مستمر</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="about" class="py-5" style="background:linear-gradient(to bottom, #1e1e1e, #141414);color:white;">
+
+    <!-- قسم من نحن (About Section) -->
+    <section id="about" class="py-5" style="background:linear-gradient(to bottom, #1e1e1e, #141414);color:white;" aria-labelledby="about-heading">
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-12 col-md-6">
-                    <h2 class="fw-bold mb-4 pt-0 mt-0" style="font-size:2rem;">مين إحنا؟ 🤔</h2>
-                    <p style="color:#ccc;font-size:1.1rem;"> إحنا فريق شغوف بابتكار أفضل الحلول لعملائنا. بنجمع بين الإبداع، التكنولوجيا، وخبرة السنين علشان نقدملك تجربة استثنائية توصل بيك لأهدافك أسرع مما تتخيل. </p>
-                    <p style="color:#ccc;font-size:1.1rem;"> هدفنا الأساسي؟ إننا نحققلك النجاح اللي تستحقه، ونخليك نجم مجالك! 🚀 </p>
+                    <h2 id="about-heading" class="fw-bold mb-4 pt-0 mt-0" style="font-size:2rem;" tabindex="0">مين إحنا؟ 🤔</h2>
+                    <p style="color:#ccc;font-size:1.1rem;" tabindex="0"> إحنا فريق شغوف بابتكار أفضل الحلول لعملائنا. بنجمع بين الإبداع، التكنولوجيا، وخبرة السنين علشان نقدملك تجربة استثنائية توصل بيك لأهدافك أسرع مما تتخيل. </p>
+                    <p style="color:#ccc;font-size:1.1rem;" tabindex="0"> هدفنا الأساسي؟ إننا نحققلك النجاح اللي تستحقه، ونخليك نجم مجالك! 🚀 </p>
                 </div>
                 <div class="col-12 col-md-6 text-center">
-                    <div style="background-color:#333;height:250px;border-radius:10px;display:flex;align-items:center;justify-content:center;"><img class="rounded img-fluid" src="assets/img/ai8v.png" loading="lazy" width="260" height="260" alt="Eight Vegetables"></div>
+                    <div style="background-color:#333;height:250px;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                        <img class="rounded img-fluid" src="assets/img/ai8v.png" loading="lazy" width="260" height="260" alt="شعار شركة Eight Vegetables" fetchpriority="high">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="text-center py-5" id="cta" style="background:linear-gradient(to bottom right, #00bfff, #1e90ff);color:white;">
+
+    <!-- قسم دعوة للتواصل (CTA Section) -->
+    <section class="text-center py-5" id="cta" style="background:linear-gradient(to bottom right, #00bfff, #1e90ff);color:white;" aria-labelledby="cta-heading">
         <div class="container">
-            <h2 class="fw-bold mb-4" style="font-size:2.2rem;">مستعد تحقق حلمك الكبير؟ 🚀</h2>
-            <p class="mb-4" style="font-size:1.2rem;">خد الخطوة الأولى معانا وخليك نجم مجالك!</p><a class="btn btn-light btn-lg fw-bold" role="button" href="#contact" style="color:#1e1e1e;border-radius:50px;padding:10px 30px;">ابدأ دلوقتي</a>
+            <h2 id="cta-heading" class="fw-bold mb-4" style="font-size:2.2rem;" tabindex="0">مستعد تحقق حلمك الكبير؟ 🚀</h2>
+            <p class="mb-4" style="font-size:1.2rem;" tabindex="0">خد الخطوة الأولى معانا وخليك نجم مجالك!</p>
+            <a class="btn btn-light btn-lg fw-bold" role="button" href="#contact" style="color:#1e1e1e;border-radius:50px;padding:10px 30px;" aria-label="ابدأ التعاون معنا الآن">ابدأ دلوقتي</a>
         </div>
     </section>
-    <footer class="text-center py-4" style="background-color:#111827;color:#d1d5db;">
+
+    <!-- تذييل الصفحة (Footer) -->
+    <footer class="text-center py-4" style="background-color:#111827;color:#d1d5db;" aria-label="معلومات الشركة">
         <div class="container">
-            <p class="mb-2" style="font-size:1rem;">© 2025 موقعك. جميع الحقوق محفوظة.</p>
-            <div class="d-flex justify-content-center gap-3"><a href="#" style="color:#d1d5db;text-decoration:none;font-size:1.2rem;">سياسة الخصوصية</a><span>|</span><a href="#" style="color:#d1d5db;text-decoration:none;font-size:1.2rem;">الشروط والأحكام</a></div>
+            <p class="mb-2" style="font-size:1rem;" tabindex="0">© 2025 Eight Vegetables. جميع الحقوق محفوظة.</p>
+            <nav aria-label="روابط إضافية">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" style="color:#d1d5db;text-decoration:none;font-size:1.2rem;" aria-label="سياسة الخصوصية">سياسة الخصوصية</a>
+                    <span aria-hidden="true">|</span>
+                    <a href="#" style="color:#d1d5db;text-decoration:none;font-size:1.2rem;" aria-label="الشروط والأحكام">الشروط والأحكام</a>
+                </div>
+            </nav>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.js"></script>
+
+    <!-- تحميل الملفات الخاصة بالأداء -->
+    <script src="assets/bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
